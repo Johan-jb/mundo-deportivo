@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice Corporal - Mundo Deportivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Índice Corporal</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="intro.html">Introducción</a></li>
+                <li><a href="game.html">Juego</a></li>
+                <li><a href="upload.html">Material Adicional</a></li>
+                <li><a href="nutrition.html">Nutrición</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="bmi">
+        <h2>Calculadora de Índice Corporal</h2>
+        <form id="bmiForm">
+            <label for="weight">Peso (kg):</label>
+            <input type="number" id="weight" required>
+            <label for="height">Altura (cm):</label>
+            <input type="number" id="height" required>
+            <button type="submit">Calcular</button>
+        </form>
+        <p id="bmiResult"></p>
+        <table id="bmiTable">
+            <thead>
+                <tr>
+                    <th>IMC</th>
+                    <th>Categoría</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Menos de 18.5</td>
+                    <td>Bajo peso</td>
+                </tr>
+                <tr>
+                    <td>18.5 - 24.9</td>
+                    <td>Peso normal</td>
+                </tr>
+                <tr>
+                    <td>25 - 29.9</td>
+                    <td>Sobrepeso</td>
+                </tr>
+                <tr>
+                    <td>30 o más</td>
+                    <td>Obesidad</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <footer>
+        <p>&copy; 2024 Mundo Deportivo</p>
+    </footer>
+    <script src="bmi.js"></script>
+</body>
+</html>

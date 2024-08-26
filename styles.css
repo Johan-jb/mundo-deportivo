@@ -1,0 +1,700 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: #000000;
+    color: #0019fa;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    max-height: 50px;
+    margin-right: 1rem;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos del menú de navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #000000; /* Fondo negro del menú */
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #ffffff; /* Color de texto blanco */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #eff5ff; /* Fondo blanco al pasar el cursor */
+    color: #ff0000; /* Color de texto naranja al pasar el cursor */
+    border-radius: 5px;
+}
+
+
+/* Estilos de las secciones */
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    background-color: #8a8787;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(192, 17, 17, 0.1);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: #ff3c00;
+}
+
+section p {
+    margin-bottom: 1rem;
+}
+
+/* Estilos de los formularios */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #1523e2;
+    color: #000000;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555555;
+}
+
+/* Estilos específicos para el área de juego */
+#gameArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gameArea video, #gameArea canvas {
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+#gameArea img.player-img {
+    max-width: 200px;
+    margin: 1rem;
+    border: 2px solid #4498e6;
+    border-radius: 10px;
+}
+
+/* Resultados de la comparación en el juego */
+#comparisonResult {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#comparisonResult .comparison-img {
+    max-width: 200px;
+    margin: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+#comparisonResult p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #000000;
+}
+
+/* Estilos para la tabla de IMC */
+#bmiTable {
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(236, 51, 51, 0.1);
+}
+
+#bmiTable th, #bmiTable td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #04440d;
+}
+
+#bmiTable th {
+    background-color: #ff9100;
+}
+
+#bmiTable tr:hover {
+    background-color: #f80000;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilos de la sección de introducción */
+#intro {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    background-color: #333333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para la imagen de fondo */
+#intro {
+    position: relative;
+    background-image: url('arge_per.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    z-index: 1;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Capa de superposición oscura */
+    z-index: 2;
+}
+
+.intro-content {
+    position: relative;
+    z-index: 3;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo blanco semi-transparente para el contenido */
+    border-radius: 10px;
+    max-width: 800px;
+    margin: auto;
+}
+
+
+#intro h2 {
+    margin-bottom: 1rem;
+    color: #ff0000;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#intro p {
+    margin-bottom: 1rem;
+    color: #ccc6c6;
+    text-align: justify;
+}
+
+#intro h3 {
+    margin-top: 1.5rem;
+    color: #006eff;
+    text-align: left;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ff0000;
+    padding-bottom: 0.5rem;
+}
+
+#intro a.btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #0077ff;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#intro a.btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+/* Estilos para la sección de inicio */
+#home {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 1200px;
+    background-color: #222222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(245, 0, 0, 0.1);
+}
+
+.banner {
+    text-align: center;
+    background: url('images/banner.jpg') no-repeat center center/cover;
+    padding: 3rem 1rem;
+    color: #247bfd;
+    border-radius: 10px;
+}
+
+.banner h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.banner p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.banner .btn {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.banner .btn:hover {
+    background-color: #f4f4f4;
+    color: #000000;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.feature {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    margin: 0 0.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.feature h3 {
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    color: #666;
+}
+
+/* Estilos de animación */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+/* Estilos para Material Adicional */
+#uploadForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#uploadForm label {
+    font-weight: bold;
+}
+
+#uploadForm input[type="file"],
+#uploadForm input[type="url"],
+#uploadForm button {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#uploadForm button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+#uploadForm button:hover {
+    background-color: #555;
+}
+
+#uploadedMaterials {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#uploadedMaterials div {
+    display: flex;
+    align-items: center;
+    background-color: rgba(244, 244, 244, 0.8); /* Fondo con opacidad */
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#uploadedMaterials img {
+    max-width: 50px; /* Tamaño del icono */
+    max-height: 50px; /* Tamaño del icono */
+    margin-left: 1rem;
+}
+
+#uploadedMaterials a {
+    color: #0000ff;
+    text-decoration: none;
+}
+
+#uploadedMaterials a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la sección de Material Adicional */
+#additional-material {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-image: url('biblioteca_futbol.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: #000000; /* Ajusta el color del texto si es necesario */
+    position: relative; /* Asegura que la posición sea relativa para que funcione el pseudo-elemento */
+}
+
+.material-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(99, 131, 175, 0.8); /* Fondo con opacidad */
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.material-item img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-left: 1rem;
+    align-self: flex-end;
+}
+
+.material-item p {
+    margin: 0.5rem 0;
+}
+
+.material-item a {
+    color: #0000ff;
+    text-decoration: none;
+    align-self: flex-end;
+}
+
+.material-item a:hover {
+    text-decoration: underline;
+}
+
+#additional-material::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Ajusta la opacidad (0.3 = 30%) para la transparencia */
+    z-index: -1;
+}
+
+
+
+/* Estilos para el área de juego (mejorado) */
+
+
+.player-img {
+    width: 200px; /* Cambia el tamaño al que desees */
+    height: 350px; /* Cambia el tamaño al que desees */
+    object-fit: cover; /* Esto se asegura de que la imagen se ajuste al tamaño sin distorsión */
+    margin: 3px; /* Añade un margen entre las imágenes si es necesario */
+}
+
+
+#gameArea video, #gameArea canvas {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#gameArea img.player-img {
+    transition: transform 0.3s;
+}
+
+#gameArea img.player-img:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: rgb(255, 38, 0);
+    text-decoration: none;
+}
+
+section#nutrition {
+    padding: 2em;
+}
+
+table {
+    color: #000000;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+table, th, td {
+    border: 1px solid #ebebeb;
+}
+
+th, td {
+    padding: 0.5em;
+    text-align: left;
+}
+
+th {
+    background-color: #ff1e00;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #9af8df;
+}
+
+tbody tr:hover {
+    background-color: #1800f0;
+}
+
+/* Estilos para la sección de Nutrición */
+#nutrition {
+    background-image: url('nutri.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: #ffffff; /* Ajusta el color del texto si es necesario */
+    position: relative; /* Asegura que la posición sea relativa para que funcione el pseudo-elemento */
+}
+
+#nutrition::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad (0.5 = 50%) para la transparencia */
+    z-index: -1;
+}
+
+/* Estilos para la tabla de Nutrición */
+#nutritionTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(0, 162, 255, 0.8); /* Fondo con opacidad */
+    color: #000;
+    margin-top: 1rem;
+    border-radius: 10px;
+    overflow: hidden; /* Para que el borde redondeado se aplique también a la tabla */
+}
+
+#nutritionTable th,
+#nutritionTable td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#nutritionTable th {
+    background-color: rgba(120, 169, 243, 0.8); /* Fondo con opacidad */
+    color: #000;
+}
+
+#nutritionTable tr:nth-child(even) {
+    background-color: rgba(244, 244, 244, 0.8); /* Fondo con opacidad */
+}
+
+#nutritionTable tr:hover {
+    background-color: rgba(120, 169, 243, 0.5); /* Color al pasar el mouse */
+}
+
+/* Estilos para la sección de Índice Corporal */
+#bmi {
+    background-image: url('imc.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: #000000; /* Ajusta el color del texto si es necesario */
+    position: relative; /* Asegura que la posición sea relativa para que funcione el pseudo-elemento */
+}
+
+#bmi::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad (0.5 = 50%) para la transparencia */
+    z-index: -1;
+}
+
+/* Estilos para la tabla de IMC */
+#bmiTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(66, 66, 66, 0.8); /* Fondo con opacidad */
+    color: #000000;
+    margin-top: 1rem;
+    border-radius: 10px;
+    overflow: hidden; /* Para que el borde redondeado se aplique también a la tabla */
+}
+
+#bmiTable th,
+#bmiTable td {
+    padding: 1rem;
+    border: 1px solid #ff0000;
+    text-align: center; /* Centra el texto en la tabla */
+}
+
+#bmiTable th {
+    background-color: rgba(120, 169, 243, 0.8); /* Fondo con opacidad */
+    color: #000;
+}
+
+#bmiTable tr:nth-child(even) {
+    background-color: rgba(66, 66, 66, 0.8); /* Fondo con opacidad */
+}
+
+#bmiTable tr:hover {
+    background-color: rgba(120, 169, 243, 0.5); /* Color al pasar el mouse */
+}
+
+/* Estilos para el formulario */
+#bmiForm {
+    background-color: rgba(66, 66, 66, 0.8); /* Fondo con opacidad */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#bmiForm label {
+    font-weight: bold;
+    color: #000;
+}
+
+#bmiForm input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#bmiForm button {
+    padding: 10px;
+    background-color: rgba(120, 169, 243, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#bmiForm button:hover {
+    background-color: rgba(120, 169, 243, 1);
+}
+
+/* Estilos para el resultado del IMC */
+#bmiResult {
+    background-color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #000; /* Color del texto */
+    font-size: 16px;
+}
+
+footer a i {
+    font-size: 20px; /* Tamaño del ícono */
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+    color: #25D366; /* Color verde de WhatsApp */
+}
+
+footer a:hover {
+    color: #0077FF; /* Color del enlace al pasar el ratón */
+}

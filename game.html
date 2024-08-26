@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego - Mundo Deportivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Juego de Comparación de Jugadores</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="intro.html">Introducción</a></li>
+                <li><a href="upload.html">Material Adicional</a></li>
+                <li><a href="nutrition.html">Nutrición</a></li>
+                <li><a href="bmi.html">Índice Corporal</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="game">
+        <h2>Juego de Comparación</h2>
+        <div id="gameArea">
+            <video id="camera" width="640" height="480" autoplay></video>
+            <button id="captureButton">Tomar Foto</button>
+            <canvas id="photoCanvas" width="640" height="480"></canvas>
+            <div id="playerImages">
+                <img src="Lionel Messi.jpg" alt="Lionel Messi" class="player-img" data-description="Lionel Messi es un futbolista argentino considerado uno de los mejores de todos los tiempos. 'Nunca dejes de luchar por tus sueños, incluso cuando todo parece imposible.'">
+                <img src="Cristian Romero.jpg" alt="Cristian Romero" class="player-img" data-description="Cristian Romero es un defensor central argentino conocido por su gran habilidad defensiva. 'La disciplina es el puente entre tus metas y tus logros.'">
+                <img src="Enzo Fernández.jpg" alt="Enzo Fernández" class="player-img" data-description="Enzo Fernández es un joven mediocampista argentino con un gran futuro. 'La perseverancia es el secreto del éxito.'">
+                <img src="Dibu_Martinez.jpg" alt="Dibu Martínez" class="player-img" data-description="Dibu Martínez es un portero argentino destacado por sus habilidades y su carisma. 'El éxito es la suma de pequeños esfuerzos repetidos día tras día.'">
+                <img src="Angel Di María.jpg" alt="Ángel Di María" class="player-img" data-description="Ángel Di María es un extremo argentino conocido por su velocidad y capacidad de regate. 'La grandeza no se mide por lo que logras, sino por los obstáculos que superas.'">
+                <img src="Lautaro Martínez.jpg" alt="Lautaro Martínez" class="player-img" data-description="Lautaro Martínez es un delantero argentino con gran capacidad goleadora. 'El talento gana juegos, pero el trabajo en equipo y la inteligencia ganan campeonatos.'">
+                <img src="Paulo Dybala.jpg" alt="Paulo Dybala" class="player-img" data-description="Paulo Dybala es un delantero argentino conocido por su técnica y habilidades ofensivas. 'El éxito es la habilidad de ir de un fracaso a otro sin perder el entusiasmo.'">
+                <img src="Franco Armani.jpg" alt="Franco Armani" class="player-img" data-description="Franco Armani es un portero argentino reconocido por sus reflejos y capacidad bajo los tres palos. 'La diferencia entre lo ordinario y lo extraordinario es ese pequeño extra.'">
+                <img src="cr_7.jpg" alt="Cristiano Ronaldo" class="player-img" data-description="CR7, conocido como Cristiano Ronaldo, es uno de los futbolistas más exitosos y reconocidos del mundo. 'Tu amor propio nunca debe depender de las opiniones de los demás.'">
+                <img src="Modric.jpg" alt="Luka Modrić" class="player-img" data-description="Luka Modrić es un mediocampista croata reconocido por su visión de juego y técnica impecable. 'El esfuerzo constante y la dedicación superan al talento innato.'">
+                <img src="neymar_jrr.jpg" alt="Neymar Jr." class="player-img" data-description="Neymar Jr. es un delantero brasileño conocido por su habilidad y creatividad en el campo. 'Cree en ti mismo y serás imparable.'">
+                <img src="Suarez_.jpg" alt="Luis Suárez" class="player-img" data-description="Luis Suárez es un delantero uruguayo famoso por su instinto goleador. 'La pasión es lo que te hará levantarte cuando todo parece perdido.'">
+                <img src="cavani_.jpg" alt="Edinson Cavani" class="player-img" data-description="Edinson Cavani es un delantero uruguayo conocido por su capacidad para anotar en momentos cruciales. 'Nunca te rindas, porque nunca sabes si el próximo intento será el que funcione.'">
+                <img src="james_.jpg" alt="James Rodríguez" class="player-img" data-description="James Rodríguez es un mediocampista colombiano destacado por su visión de juego y precisión. 'El trabajo duro supera al talento cuando el talento no trabaja duro.'">
+                <img src="luis_diaz.jpg" alt="Luis Díaz" class="player-img" data-description="Luis Díaz es un extremo colombiano que se destaca por su velocidad y habilidades de dribbling. 'La única manera de hacer un gran trabajo es amar lo que haces.'">
+                <img src="nunez.jpg" alt="Darwin Núñez" class="player-img" data-description="Darwin Núñez es un delantero uruguayo con gran potencial y capacidad de finalización. 'El dolor que sientes hoy será la fuerza que sientas mañana.'">
+                <img src="garnacho.jpg" alt="Alejandro Garnacho" class="player-img" data-description="Alejandro Garnacho es un joven talento argentino con un futuro prometedor. 'El éxito es la suma de pequeños esfuerzos repetidos día tras día.'">
+                <img src="vini-jr.jpg" alt="Vinícius Jr." class="player-img" data-description="Vinícius Jr. es un extremo brasileño conocido por su velocidad y habilidad en el uno contra uno. 'La práctica no te hace perfecto, te hace mejor.'">
+                <img src="lapadula.jpg" alt="Gianluca Lapadula" class="player-img" data-description="Gianluca Lapadula es un delantero peruano-italiano conocido por su habilidad para anotar. 'La perseverancia es el secreto del éxito.'">
+                <img src="sonne.jpg" alt="Heung-min Son" class="player-img" data-description="Heung-min Son es un extremo surcoreano reconocido por su velocidad y capacidad de finalización. 'No sueñes con el éxito, trabaja para alcanzarlo.'">
+                <img src="soteldo.jpg" alt="Yeferson Soteldo" class="player-img" data-description="Yeferson Soteldo es un extremo venezolano conocido por su habilidad en el regate. 'La grandeza no se mide por lo que logras, sino por los obstáculos que superas.'">
+                <img src="salomon_rodon.jpg" alt="Salomón Rondón" class="player-img" data-description="Salomón Rondón es un delantero venezolano conocido por su fortaleza física y capacidad goleadora. 'El talento gana juegos, pero el trabajo en equipo y la inteligencia ganan campeonatos.'">
+                <img src="lamine.jpg" alt="Lamine Yamal" class="player-img" data-description="Lamine Yamal es un joven talento español conocido por su gran habilidad técnica. 'El éxito es la habilidad de ir de un fracaso a otro sin perder el entusiasmo.'">
+                <img src="willams.jpg" alt="Iñaki Williams" class="player-img" data-description="Iñaki Williams es un delantero español conocido por su velocidad y fortaleza física. 'La diferencia entre lo ordinario y lo extraordinario es ese pequeño extra.'">
+                <img src="paolo.jpg" alt="Paolo Guerrero" class="player-img" data-description="Paolo Guerrero es un delantero peruano reconocido por su capacidad goleadora en momentos clave. 'Nunca dejes de luchar por tus sueños, incluso cuando todo parece imposible.'">
+                <img src="enner.jpg" alt="Enner Valencia" class="player-img" data-description="Enner Valencia es un delantero ecuatoriano conocido por su velocidad y capacidad goleadora. 'Cree en ti mismo y serás imparable.'">
+                <img src="diego.jpg" alt="Diego Forlán" class="player-img" data-description="Diego Forlán es un exdelantero uruguayo conocido por su precisión y capacidad goleadora. 'La pasión es lo que te hará levantarte cuando todo parece perdido.'">
+                <img src="ronaldhino.jpg" alt="Ronaldinho" class="player-img" data-description="Ronaldinho es un exfutbolista brasileño conocido por su magia y alegría en el campo. 'Nunca te rindas, porque nunca sabes si el próximo intento será el que funcione.'">
+                <img src="ronaldo_nazario.jpg" alt="Ronaldo Nazário" class="player-img" data-description="Ronaldo Nazário es un exdelantero brasileño considerado uno de los mejores de todos los tiempos. 'El trabajo duro supera al talento cuando el talento no trabaja duro.'">
+                <img src="aguero.jpg" alt="Sergio Agüero" class="player-img" data-description="Sergio Agüero es un exdelantero argentino conocido por su habilidad para anotar goles importantes. 'La única manera de hacer un gran trabajo es amar lo que haces.'">                
+                <!-- Agrega más imágenes según sea necesario -->
+            </div>
+        </div>
+        <div id="comparisonResult"></div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Mundo Deportivo</p>
+    </footer>
+    <script src="game.js"></script>
+</body>
+</html>
